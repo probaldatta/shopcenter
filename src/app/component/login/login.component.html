@@ -1,0 +1,39 @@
+<section class="reg-log-box">
+    <div class="container">
+        <app-alert></app-alert>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-12 col-lg-10">
+                <div class="wrap d-md-flex rounded-corner">
+                    <div class="img">
+                        <img src="../../../assets/loginbanner.jpg" width="100%">
+                    </div>
+                    <div class="form-wrap p-4 p-md-5">
+                        <div class="d-flex">
+                            <div class="w-100">
+                                <h5 class="mb-4">LOGIN</h5>
+                            </div>
+                        </div>
+                        <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" class="signin-form">
+                            <div class="form-group mb-4">
+                                <label class="label" for="email">Username</label>
+                                <input type="email" id="email" name="email" [(ngModel)]="form.email" class="form-control" required="" #email="ngModel">
+                                <span class="error-message text-danger" *ngIf="email.invalid && isFormSubmitted ||email.invalid && email.touched">Username is required.</span>
+
+                            </div>
+                            <div class="form-group mb-4">
+                                <label class="label" for="password">Password</label>
+                                <input type="password" name="password" [(ngModel)]="form.password" class="form-control" required="" #password="ngModel">
+                                <span class="error-message text-danger" *ngIf="password.invalid && isFormSubmitted || password.invalid && password.touched">Password is required.</span>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="form-control btn btn-primary rounded submit px-3">LOGIN</button>
+                            </div>
+                        </form>
+                        <p class="text-center  mt-4">Not a member? <a routerLink="/signup">Register</a></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

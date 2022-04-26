@@ -1,0 +1,38 @@
+<section class="primary-header p-2">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-3 col-sm-4 col-md-4 col-5">
+                <a routerLink="/home" class="brand-wrap web-logo text-white" data-abc="true">
+                    <img src="../assets/logo.png">
+                </a>
+            </div>
+            <div class="col-lg-4 col-xl-5 col-sm-8 col-md-4 d-none d-md-block">
+                <form action="#" class="search-form">
+                    <div class="input-group w-100">
+                        <input type="text" class="form-control search-input" placeholder="Search for products, brands and more">
+                        <div class="input-group-append"> <button class="btn search-button" type="submit"> <i class="fa fa-search"></i> </button> </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-5 col-xl-4 col-sm-8 col-md-4 col-7">
+                <div class="d-flex justify-content-end align-items-center">{{_authService.isLogedin | async}}
+                    <a class="nav-link text-white " routerLink="/cart"> <i class="fa fa-shopping-cart"></i></a>
+                    <a class="text-white login-btn" routerLink="/login">LOGIN</a>
+                    <ul *ngIf="_authService.isLogedin|async" class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                      </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <p class="dropdown-item" (click)="_authService.onSignOut()">Sign Out</p>
+                                </li>
+                                <li><a class="dropdown-item" routerLink="/dashboard">Profile</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

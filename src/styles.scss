@@ -1,0 +1,261 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --bg-beige: #f2f9f0;
+}
+
+body {
+    background-color: var(--bg-beige);
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:active:focus {
+    background-color: #ef3259;
+    border-color: #ef3259;
+    box-shadow: none;
+}
+
+.rounded-corner {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.form-group {
+    position: relative;
+    .error-message {
+        position: absolute;
+        font-size: 12px;
+        bottom: -17px;
+        right: 0px;
+    }
+}
+
+.reg-log-box {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    h5,
+    p {
+        text-transform: uppercase;
+    }
+    .img {
+        width: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    // .login-img {
+    //     background-image: url(assets/images/loginbanner.jpg);
+    // }
+    // .signup-img {
+    //     background-image: url(assets/images/signupbanner.jpg);
+    // }
+    .form-wrap {
+        width: 50%;
+        background: white;
+        label {
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: #747070;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .form-control,
+        .btn {
+            border-radius: 0px !important;
+        }
+    }
+}
+
+
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+body {
+    background-color: aliceblue;
+}
+
+.login-bg {
+    width: 100%;
+    min-height: 100vh;
+    background: #0e528f;
+    display: flex;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.form-control {
+    appearance: auto;
+}
+
+a {
+    cursor: pointer;
+}
+
+header.header {
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
+    @media (min-width: 1200px) {
+        .container {
+            max-width: 1330px;
+        }
+    }
+    .primary-header {
+        background-color: #9c64d3;
+        .web-logo {
+            width: 170px;
+            display: block;
+            img {
+                width: 100%;
+            }
+        }
+        .search-form {
+            padding-right: 30px;
+            .search-input {
+                box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
+                border-radius: 0px;
+                font-size: 15px;
+                padding-right: 30px;
+            }
+            .input-group-append {
+                position: absolute;
+                right: 0px;
+                z-index: 99;
+            }
+        }
+        .login-btn {
+            font-weight: 600;
+            border: 1px solid #fff;
+            padding: 0px 15px;
+            height: 23px;
+            font-size: 14px;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+    }
+    .secondary-header {
+        background-color: white;
+        nav a {
+            flex: 1;
+            text-align: center;
+            text-decoration: none;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        nav a.all-cat {
+            background-color: #fea600;
+            color: white;
+            font-weight: 500;
+            i {
+                color: white;
+                padding-right: 8px;
+            }
+        }
+    }
+}
+
+.offer-box {
+    min-height: 150px;
+}
+
+.carousel-nav-center {
+    .owl-carousel {
+        display: flex !important;
+        flex-direction: column;
+    }
+    .owl-nav {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        top: 0px;
+        margin: auto;
+        bottom: 0px;
+        height: 80px;
+    }
+    .owl-nav [class*=owl-] {
+        margin: 0px;
+        padding: 4px 10px;
+        background: #fff;
+        display: inline-block;
+        cursor: pointer;
+        border-radius: 0px;
+        color: #062e6a;
+        font-size: 29px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .owl-nav [class*=owl-]:hover {
+        background-color: white !important;
+    }
+}
+
+.card-with-shadow {
+    box-shadow: 0px 0px 3px #999;
+    background: #fff;
+}
+
+.item-card {
+    box-shadow: 0px 0px 3px #999;
+    padding: 10px;
+}
+
+.footer-dark {
+    background: #0b0e1e;
+    height: 300px;
+}
+
+.footer-gray {
+    background: #060812;
+    height: 60px;
+}
+
+.center-box {
+    width: 400px;
+    margin: auto;
+    padding: 30px;
+    background: #FFF;
+}
+
+.signup-box {
+    width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #FFF;
+}
+
+.submenu {
+    position: absolute;
+    background: white;
+    top: 59px;
+    z-index: 100;
+    padding: 5px;
+    box-shadow: 0px 0px 3px #999;
+    ul {
+        list-style: none;
+        margin-bottom: 0px;
+        padding: 0px;
+        a {
+            padding: 3px 7px;
+            cursor: pointer;
+        }
+    }
+}

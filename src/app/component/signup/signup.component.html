@@ -1,0 +1,62 @@
+<section class="reg-log-box">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-12 col-lg-10">
+                <div class="wrap d-md-flex rounded-corner">
+                    <div class="img signup-img">
+                        <img src="../../../assets/signupbanner.jpg" width="100%">
+                    </div>
+                    <div class="form-wrap p-3 p-md-5">
+                        <div class="d-flex">
+                            <div class="w-100">
+                                <h5 class="mb-4">{{title}}</h5>
+                            </div>
+                        </div>
+                        <form class="signin-form" [formGroup]="signupForm" (ngSubmit)="submitForm()">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group mb-4">
+                                        <label class="label" for="firstname">First Name</label>
+                                        <input type="text" name="firstname" class="form-control" formControlName="firstname">
+                                        <span class="error-message text-danger" *ngIf="signupForm.get('firstname')?.invalid && isFormSubmitted || signupForm.get('firstname')?.hasError('required') && signupForm.get('firstname')?.touched">First name is required.</span>
+                                        <span class="error-message text-danger" *ngIf="signupForm.get('firstname')?.hasError('minlength') && signupForm.get('firstname')?.touched">First name must be 2 letter.</span>
+                                    </div>
+                                </div>
+                                <div class="col ">
+                                    <div class="form-group mb-4 ">
+                                        <label class="label" for="lastname">Last Name</label>
+                                        <input type="text" name="lastname" class="form-control " formControlName="lastname">
+                                        <span class="error-message text-danger " *ngIf="signupForm.get('lastname')?.invalid && isFormSubmitted || signupForm.get( 'lastname')?.hasError('required') && signupForm.get('lastname')?.touched ">Last name is required.</span>
+                                        <span class="error-message text-danger" *ngIf="signupForm.get('lastname')?.hasError('minlength') && signupForm.get('lastname')?.touched">Last name must be 2 letter.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-4 ">
+                                <label class="label" for="email">Email Id.</label>
+                                <input type="email" name="email" class="form-control " formControlName="email">
+                                <span class="error-message text-danger" *ngIf="signupForm.get('email')?.invalid && isFormSubmitted || signupForm.get( 'email')?.hasError('required') && signupForm.get('email')?.touched ">Email Id is required.</span>
+                                <span class="error-message text-danger" *ngIf="signupForm.get('email')?.hasError('email') && signupForm.get('email')?.touched ">Please provide a valid Email.</span>
+                            </div>
+                            <div class="form-group mb-4 ">
+                                <label class="label" for="phone">Phone No.</label>
+                                <input type="number" name="phone" class="form-control " formControlName="phone">
+                                <span class="error-message text-danger" *ngIf="signupForm.get('phone')?.invalid && isFormSubmitted || signupForm.get( 'phone')?.hasError('required') && signupForm.get('phone')?.touched ">Phone No. is required.</span>
+                                <span class="error-message text-danger" *ngIf="signupForm.get('phone')?.touched && signupForm.get('phone')?.hasError('minlength') || signupForm.get('phone')?.hasError('maxlength')">Phone No. must be 10 digit</span>
+                            </div>
+                            <div class="form-group mb-4 ">
+                                <label class="label" for="password ">Password</label>
+                                <input type="password" name="password " class="form-control " formControlName="password">
+                                <span class="error-message text-danger" *ngIf="signupForm.get('password')?.invalid && isFormSubmitted || signupForm.get( 'password')?.hasError('required') && signupForm.get('password')?.touched ">Password is required.</span>
+                                <span class="error-message text-danger" *ngIf="signupForm.get( 'password')?.hasError('minlength') && signupForm.get('password')?.touched ">Password must be minimum 8 digit.</span>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="form-control btn btn-primary rounded submit px-3">Register</button>
+                            </div>
+                        </form>
+                        <p class="text-center mt-4 mb-0 ">Already a member?<a routerLink="/login">Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
